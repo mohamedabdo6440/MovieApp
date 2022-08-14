@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>React App</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+
+
+  <script>
+    var nvWidth = 0,
+      isTrue = !0;
+    $(".strip-toggel-menu").click(function () {
+      isTrue
+        ? ($(".nav-tab-menu").addClass("open-menu").removeClass("close-menu"),
+          (nvWidth = $(".nav-tab-menu").width() - 10),
+          $(".strip-header-nav").css("left", nvWidth),
+          $(".fa-align-justify").toggleClass("fa-times"),
+          $(".nav-tab-menu .item1").animate({ opacity: "1", paddingTop: "25px" }, 1100),
+          $(".nav-tab-menu .item2").animate({ opacity: "1", paddingTop: "25px" }, 1200),
+          $(".nav-tab-menu .item3").animate({ opacity: "1", paddingTop: "25px" }, 1300),
+          $(".nav-tab-menu .item4").animate({ opacity: "1", paddingTop: "25px" }, 1400),
+          $(".nav-tab-menu .item5").animate({ opacity: "1", paddingTop: "25px" }, 1500),
+          $(".nav-tab-menu .item6").animate({ opacity: "1", paddingTop: "25px" }, 1600),
+          (isTrue = !isTrue))
+        : ($(".nav-tab-menu").addClass("close-menu").removeClass("open-menu"),
+          $(".fa-align-justify").toggleClass("fa-times"),
+          $(".strip-header-nav").css("left", 0),
+          $(".nav-tab-menu li").animate({ opacity: "0", paddingTop: "500px" }, 500),
+          (isTrue = !isTrue));
+    });
+  </script>
+
+</body>
+
+</html>
